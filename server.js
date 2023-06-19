@@ -5,7 +5,9 @@ const routes = require('./routes/routes');
 
 const app = express();
 const port = 8080;
-app.use(cors());
+app.use(cors({
+  origin: '*'
+}));
 
 // Conexión a la base de datos MongoDB Atlas
 mongoose.connect('mongodb+srv://aldotr:abduzcan10@nosql.h9q3jgy.mongodb.net/?retryWrites=true&w=majority',{
